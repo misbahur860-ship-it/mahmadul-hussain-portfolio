@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahmadul Hussain | AI & Web Developer</title>
-    <meta name="description" content="Computer Science graduate building AI-powered web applications.">
+    <title>Mahmadul Hussain | Front-End & AI Learner</title>
+    <meta name="description" content="Computer Science graduate building web projects with HTML, CSS, JavaScript, and AI APIs.">
     
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,13 +31,11 @@
                             dark: '#0A0A0A',
                             card: '#111111',
                             border: '#222222',
-                            accent: '#6366f1', // Indigo
-                            accentHover: '#4f46e5'
+                            accent: '#6366f1', 
                         }
                     },
                     animation: {
                         'blob': 'blob 7s infinite',
-                        'fade-up': 'fadeUp 0.8s ease-out forwards',
                     },
                     keyframes: {
                         blob: {
@@ -45,10 +43,6 @@
                             '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
                             '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
                             '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        },
-                        fadeUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
                         }
                     }
                 }
@@ -59,7 +53,7 @@
     <style>
         body {
             background-color: #0A0A0A;
-            color: #f3f4f6;
+            color: #e5e7eb;
         }
         /* Custom scrollbar */
         ::-webkit-scrollbar {
@@ -78,15 +72,15 @@
         /* Reveal classes for JS observer */
         .reveal {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateY(20px);
+            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
         .glass-nav {
-            background: rgba(10, 10, 10, 0.7);
+            background: rgba(10, 10, 10, 0.8);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
@@ -98,7 +92,7 @@
     <nav class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
         <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="#" class="text-xl font-bold tracking-tight text-white flex items-center gap-2 group">
-                <i data-lucide="cpu" class="w-6 h-6 text-indigo-500 group-hover:rotate-12 transition-transform"></i>
+                <i data-lucide="terminal" class="w-5 h-5 text-indigo-500 group-hover:text-white transition-colors"></i>
                 Mahmadul<span class="text-indigo-500">.</span>
             </a>
             <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
@@ -107,7 +101,7 @@
                 <a href="#projects" class="hover:text-white transition-colors">Projects</a>
                 <a href="#experience" class="hover:text-white transition-colors">Experience</a>
             </div>
-            <a href="https://github.com/Mahmadul-rgb" target="_blank" class="p-2 bg-white/5 rounded-full hover:bg-white/10 transition-colors border border-white/5">
+            <a href="https://github.com/Mahmadul-rgb" target="_blank" rel="noopener noreferrer" class="p-2 bg-white/5 rounded-full hover:bg-white/10 transition-colors border border-white/5">
                 <i data-lucide="github" class="w-5 h-5 text-gray-300"></i>
             </a>
         </div>
@@ -115,30 +109,28 @@
 
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-        <!-- Background Gradient Blobs -->
-        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
-        <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-600/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-2000"></div>
+        <!-- Subtle Background Blobs -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/10 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
+        <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-gray-600/10 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-2000"></div>
 
-        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center reveal">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300 mb-6">
+        <div class="relative z-10 max-w-3xl mx-auto px-6 text-center reveal">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-gray-300 mb-6">
                 <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                Building Pixora
+                Currently building Pixora
             </div>
-            <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-white mb-6 leading-tight">
                 Computer Science Graduate <br/>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500">
-                    Building with AI
-                </span>
+                <span class="text-indigo-400">Front-End & AI Learner</span>
             </h1>
-            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Transforming complex concepts into production-ready web applications. Focused on artificial intelligence, machine learning, and modern web development.
+            <p class="text-lg text-gray-400 mb-10 leading-relaxed">
+                I build clean, responsive web interfaces using HTML, CSS, and vanilla JavaScript. My current focus is bridging the gap between web development and machine learning by integrating AI APIs into practical projects.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#projects" class="w-full sm:w-auto px-8 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
-                    View My Work <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                <a href="#projects" class="w-full sm:w-auto px-6 py-3 bg-white text-black font-medium rounded-lg hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
+                    See what I'm building <i data-lucide="arrow-down" class="w-4 h-4"></i>
                 </a>
-                <a href="https://github.com/Mahmadul-rgb" target="_blank" class="w-full sm:w-auto px-8 py-3 bg-white/5 text-white font-semibold rounded-lg border border-white/10 hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
-                    <i data-lucide="github" class="w-4 h-4"></i> GitHub
+                <a href="https://github.com/Mahmadul-rgb" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3 bg-white/5 text-white font-medium rounded-lg border border-white/10 hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
+                    <i data-lucide="github" class="w-4 h-4"></i> GitHub Profile
                 </a>
             </div>
         </div>
@@ -150,33 +142,28 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 
                 <div class="reveal">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Learning by <span class="text-indigo-400">Building.</span></h2>
-                    <p class="text-gray-400 leading-relaxed mb-6">
-                        I'm a Computer Science graduate with a strong interest in artificial intelligence, machine learning, and modern web development. Over the past few years, I've spent most of my time learning by building—experimenting with AI tools, creating web applications, and exploring how technology can solve practical problems.
-                    </p>
-                    <p class="text-gray-400 leading-relaxed mb-8">
-                        Right now, I'm focused on building projects, improving my technical skills, and learning how to turn ideas into useful products that people can actually use. My current major focus is Pixora, an AI-powered image generation platform.
-                    </p>
-                    <div class="flex gap-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="twitter" class="w-6 h-6"></i></a>
-                        <a href="mailto:your.email@example.com" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="mail" class="w-6 h-6"></i></a>
+                    <h2 class="text-3xl font-bold mb-6 text-white">Learning through <span class="text-indigo-400">execution.</span></h2>
+                    <div class="space-y-4 text-gray-400 leading-relaxed">
+                        <p>
+                            Hi, I'm Mahmadul. I recently graduated with a B.Sc. in Computer Science. During my studies, I realized that theory is important, but nothing beats the experience of actually writing code and making things work in a browser.
+                        </p>
+                        <p>
+                            I don't claim to know every framework out there. Instead, I focus on strong fundamentals: writing clean HTML, styling responsive layouts with CSS, and using JavaScript to add logic and interact with APIs. 
+                        </p>
+                        <p>
+                            My recent internship gave me hands-on exposure to machine learning fundamentals, and right now, I'm spending my time learning how to connect front-end web interfaces with AI tools to solve practical problems.
+                        </p>
                     </div>
                 </div>
 
                 <!-- Profile Image -->
-                <div class="reveal relative group rounded-2xl overflow-hidden border border-white/10 bg-brand-card aspect-square md:aspect-[4/5] max-w-md mx-auto w-full">
+                <div class="reveal relative group rounded-2xl overflow-hidden border border-white/10 bg-brand-card aspect-square md:aspect-[4/5] max-w-sm mx-auto w-full">
                     <img 
                         src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5Z_QVeUof4X5b_fgVnNumCyILHjDXDJh8wrUPoMKTJ3jfl11MCuGJJXHy8y18yM3bvCsrU5BPuwvlIKbHp48Tui6BKlV3zsft8sJIgLu98rUdFKGMAuBaEBg4g5FJFXsQLjcAiiOZowvWfid5bosJ7FENupbW_WQzXMgThX1EBSGuwXDWSKw5r6-LM2A/s320/WhatsApp%20Image%202026-06-14%20at%202.54.28%20PM.jpeg" 
                         alt="Mahmadul Hussain" 
-                        class="object-cover w-full h-full transition-all duration-700 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
+                        class="object-cover w-full h-full transition-all duration-500 filter grayscale group-hover:grayscale-0"
                     >
-                    <!-- Gradient Overlay -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-80"></div>
-                    <div class="absolute bottom-6 left-6 right-6">
-                        <div class="font-mono text-sm text-indigo-400 bg-brand-dark/80 backdrop-blur-sm p-3 rounded border border-white/10">
-                            > status: Building the future<span class="animate-pulse">_</span>
-                        </div>
-                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-90"></div>
                 </div>
 
             </div>
@@ -184,44 +171,44 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-24 relative border-t border-white/5 bg-brand-card/30">
+    <section id="skills" class="py-24 relative border-t border-white/5 bg-[#0d0d0d]">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center reveal">Technical <span class="text-indigo-400">Arsenal</span></h2>
+            <h2 class="text-3xl font-bold mb-12 text-center text-white reveal">Current <span class="text-indigo-400">Tech Stack</span></h2>
             
             <div class="grid md:grid-cols-3 gap-6">
-                <!-- Web Dev -->
-                <div class="reveal bg-brand-card p-6 rounded-2xl border border-white/5 hover:border-indigo-500/50 transition-colors group">
-                    <i data-lucide="layout-template" class="w-10 h-10 text-indigo-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="text-xl font-semibold text-white mb-4">Web Development</h3>
+                <!-- Front-End -->
+                <div class="reveal bg-brand-card p-6 rounded-2xl border border-white/5">
+                    <i data-lucide="monitor-smartphone" class="w-8 h-8 text-indigo-400 mb-4"></i>
+                    <h3 class="text-lg font-semibold text-white mb-4">Front-End Dev</h3>
                     <ul class="space-y-3">
-                        <li class="flex items-center gap-2 text-gray-400"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Next.js & React</li>
-                        <li class="flex items-center gap-2 text-gray-400"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> TypeScript / JavaScript</li>
-                        <li class="flex items-center gap-2 text-gray-400"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Tailwind CSS</li>
-                        <li class="flex items-center gap-2 text-gray-400"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Node.js</li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i data-lucide="chevron-right" class="w-4 h-4 text-indigo-500"></i> HTML5</li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i data-lucide="chevron-right" class="w-4 h-4 text-indigo-500"></i> CSS3 & Tailwind CSS</li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i data-lucide="chevron-right" class="w-4 h-4 text-indigo-500"></i> Vanilla JavaScript</li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i data-lucide="chevron-right" class="w-4 h-4 text-indigo-500"></i> Responsive Design</li>
                     </ul>
                 </div>
 
                 <!-- AI/ML -->
-                <div class="reveal bg-brand-card p-6 rounded-2xl border border-white/5 hover:border-purple-500/50 transition-colors group" style="transition-delay: 100ms;">
-                    <i data-lucide="brain-circuit" class="w-10 h-10 text-purple-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="text-xl font-semibold text-white mb-4">AI & Machine Learning</h3>
+                <div class="reveal bg-brand-card p-6 rounded-2xl border border-white/5" style="transition-delay: 100ms;">
+                    <i data-lucide="brain" class="w-8 h-8 text-indigo-400 mb-4"></i>
+                    <h3 class="text-lg font-semibold text-white mb-4">AI & Machine Learning</h3>
                     <ul class="space-y-3">
-                        <li class="flex items-center gap-2 text-gray-400"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Python</li>
-                        <li class="flex items-center gap-2 text-gray-400"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Data Analysis</li>
-                        <li class="flex items-center gap-2 text-gray-400"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> AI Integrations</li>
-                        <li class="flex items-center gap-2 text-gray-400"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Automation</li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i data-lucide="chevron-right" class="w-4 h-4 text-indigo-500"></i> ML Fundamentals</li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i data-lucide="chevron-right" class="w-4 h-4 text-indigo-500"></i> AI API Integration</li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i data-lucide="chevron-right" class="w-4 h-4 text-indigo-500"></i> AI Prompting Tools</li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i data-lucide="chevron-right" class="w-4 h-4 text-indigo-500"></i> Data Analysis Basics</li>
                     </ul>
                 </div>
 
                 <!-- Tools -->
-                <div class="reveal bg-brand-card p-6 rounded-2xl border border-white/5 hover:border-emerald-500/50 transition-colors group" style="transition-delay: 200ms;">
-                    <i data-lucide="terminal-square" class="w-10 h-10 text-emerald-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="text-xl font-semibold text-white mb-4">Tools & Workflow</h3>
+                <div class="reveal bg-brand-card p-6 rounded-2xl border border-white/5" style="transition-delay: 200ms;">
+                    <i data-lucide="wrench" class="w-8 h-8 text-indigo-400 mb-4"></i>
+                    <h3 class="text-lg font-semibold text-white mb-4">Tools & Workflow</h3>
                     <ul class="space-y-3">
-                        <li class="flex items-center gap-2 text-gray-400"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Git & GitHub</li>
-                        <li class="flex items-center gap-2 text-gray-400"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Product Development</li>
-                        <li class="flex items-center gap-2 text-gray-400"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Problem Solving</li>
-                        <li class="flex items-center gap-2 text-gray-400"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> B.Sc. Computer Science</li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i data-lucide="chevron-right" class="w-4 h-4 text-indigo-500"></i> Git Version Control</li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i data-lucide="chevron-right" class="w-4 h-4 text-indigo-500"></i> GitHub Repositories</li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i data-lucide="chevron-right" class="w-4 h-4 text-indigo-500"></i> VS Code</li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i data-lucide="chevron-right" class="w-4 h-4 text-indigo-500"></i> Code Debugging</li>
                     </ul>
                 </div>
             </div>
@@ -231,43 +218,56 @@
     <!-- Projects Section -->
     <section id="projects" class="py-24 relative border-t border-white/5">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 reveal">Featured <span class="text-indigo-400">Work</span></h2>
+            <h2 class="text-3xl font-bold mb-12 text-white reveal">Recent <span class="text-indigo-400">Projects</span></h2>
             
             <!-- Pixora Project Card -->
-            <div class="reveal bg-brand-card border border-white/10 rounded-3xl overflow-hidden group">
+            <div class="reveal bg-brand-card border border-white/10 rounded-2xl overflow-hidden">
                 <div class="grid md:grid-cols-2 gap-0">
-                    <div class="p-8 md:p-12 flex flex-col justify-center">
-                        <div class="flex items-center gap-2 text-indigo-400 text-sm font-semibold tracking-wider uppercase mb-4">
-                            <i data-lucide="sparkles" class="w-4 h-4"></i> Flagship Project
+                    <div class="p-8 md:p-10 flex flex-col justify-center">
+                        <div class="flex items-center gap-2 text-indigo-400 text-xs font-semibold tracking-wider uppercase mb-3">
+                            Current Project
                         </div>
-                        <h3 class="text-3xl font-bold text-white mb-4">Pixora</h3>
-                        <p class="text-gray-400 leading-relaxed mb-8">
-                            An advanced AI-powered image generation platform. Built to streamline the creative process, allowing users to generate high-quality visuals through intuitive text prompts and modern web interfaces.
+                        <h3 class="text-2xl font-bold text-white mb-4">Pixora Image Generator</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            A web-based interface that allows users to generate images from text prompts. I built this to practice connecting front-end UI elements to external AI APIs using asynchronous JavaScript (`fetch`). It handles user inputs, manages loading states, and displays the generated visual data dynamically.
                         </p>
                         
                         <div class="flex flex-wrap gap-2 mb-8">
-                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">Next.js</span>
-                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">React</span>
-                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">AI APIs</span>
-                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">Tailwind</span>
+                            <span class="px-3 py-1 bg-[#1a1a1a] border border-white/10 rounded-md text-xs text-gray-300">HTML</span>
+                            <span class="px-3 py-1 bg-[#1a1a1a] border border-white/10 rounded-md text-xs text-gray-300">CSS / Tailwind</span>
+                            <span class="px-3 py-1 bg-[#1a1a1a] border border-white/10 rounded-md text-xs text-gray-300">Vanilla JavaScript</span>
+                            <span class="px-3 py-1 bg-[#1a1a1a] border border-white/10 rounded-md text-xs text-gray-300">AI API Integration</span>
                         </div>
 
                         <div class="flex gap-4">
-                            <a href="#" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-colors flex items-center gap-2">
-                                Live Demo <i data-lucide="external-link" class="w-4 h-4"></i>
+                            <a href="https://mahmadul-rgb.github.io/pixora/" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-white text-black text-sm font-medium rounded-md hover:bg-gray-200 transition-colors flex items-center gap-2">
+                                View Live Site <i data-lucide="external-link" class="w-4 h-4"></i>
                             </a>
-                            <a href="https://github.com/Mahmadul-rgb" target="_blank" class="px-6 py-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium rounded-lg transition-colors flex items-center gap-2">
-                                Source <i data-lucide="github" class="w-4 h-4"></i>
+                            <a href="https://github.com/Mahmadul-rgb/pixora" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-transparent border border-white/20 text-white text-sm font-medium rounded-md hover:bg-white/10 transition-colors flex items-center gap-2">
+                                Source Code <i data-lucide="github" class="w-4 h-4"></i>
                             </a>
                         </div>
                     </div>
                     
-                    <!-- Abstract Placeholder for Project Image -->
-                    <div class="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 min-h-[300px] flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] [mask-image:linear-gradient(to_bottom_right,white,transparent)]"></div>
-                        <i data-lucide="image" class="w-24 h-24 text-white/20 group-hover:scale-110 transition-transform duration-500"></i>
-                        <div class="absolute bottom-4 right-4 bg-black/50 backdrop-blur text-xs text-gray-400 px-3 py-1 rounded-full border border-white/10">
-                            Screenshot Placeholder
+                    <!-- Simplified Visual representation for the project -->
+                    <div class="bg-[#151515] border-l border-white/5 min-h-[300px] flex items-center justify-center relative p-8">
+                        <div class="w-full max-w-sm rounded-lg border border-white/10 bg-[#0A0A0A] shadow-2xl overflow-hidden">
+                            <!-- Mock Browser Bar -->
+                            <div class="bg-[#1a1a1a] p-3 flex gap-2 border-b border-white/5">
+                                <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+                            </div>
+                            <!-- Mock UI -->
+                            <div class="p-6">
+                                <div class="w-1/2 h-4 bg-white/10 rounded mb-6"></div>
+                                <div class="w-full h-10 bg-white/5 rounded border border-white/10 mb-4 flex items-center px-3">
+                                    <div class="w-1/3 h-2 bg-white/20 rounded"></div>
+                                </div>
+                                <div class="w-full aspect-square bg-indigo-500/10 rounded border border-indigo-500/20 flex items-center justify-center">
+                                    <i data-lucide="image" class="w-8 h-8 text-indigo-500/50"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -276,33 +276,44 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-24 relative border-t border-white/5 bg-brand-card/30">
+    <section id="experience" class="py-24 relative border-t border-white/5 bg-[#0d0d0d]">
         <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center reveal">Experience & <span class="text-indigo-400">Education</span></h2>
+            <h2 class="text-3xl font-bold mb-12 text-center text-white reveal">Experience & <span class="text-indigo-400">Education</span></h2>
             
-            <div class="relative border-l border-white/10 ml-4 md:ml-0 md:pl-0 space-y-12">
+            <div class="relative border-l border-white/10 ml-4 md:ml-0 md:pl-0 space-y-10">
                 
-                <!-- Timeline Item 1 -->
+                <!-- Timeline Item 1: Current -->
                 <div class="reveal relative md:pl-8 pl-6">
-                    <div class="absolute w-4 h-4 bg-indigo-500 rounded-full -left-[9px] md:-left-[9px] top-1 border-4 border-brand-dark"></div>
-                    <div class="bg-brand-card border border-white/5 p-6 rounded-2xl">
-                        <span class="text-sm text-indigo-400 font-mono mb-2 block">Recent</span>
-                        <h3 class="text-xl font-bold text-white">AI & Machine Learning Intern</h3>
-                        <p class="text-gray-400 mt-2">
-                            Achieved an overall score of 79%. Strengthened understanding of machine learning concepts, data-driven problem solving, and real-world AI applications.
+                    <div class="absolute w-3 h-3 bg-green-500 rounded-full -left-[6.5px] md:-left-[6.5px] top-1.5 ring-4 ring-[#0d0d0d]"></div>
+                    <div class="bg-brand-card border border-white/5 p-6 rounded-xl hover:border-white/10 transition-colors">
+                        <span class="text-xs text-green-400 font-mono mb-2 block">Present</span>
+                        <h3 class="text-lg font-bold text-white">Independent Front-End Builder</h3>
+                        <p class="text-gray-400 text-sm mt-2 leading-relaxed">
+                            Currently focused on building <a href="https://mahmadul-rgb.github.io/pixora/" class="text-indigo-400 hover:underline">Pixora</a> and expanding my GitHub portfolio. Applying JavaScript to solve real problems, learning API architecture, and refining responsive UI design.
                         </p>
                     </div>
                 </div>
 
-                <!-- Timeline Item 2 -->
+                <!-- Timeline Item 2: Internship -->
                 <div class="reveal relative md:pl-8 pl-6">
-                    <div class="absolute w-4 h-4 bg-gray-600 rounded-full -left-[9px] md:-left-[9px] top-1 border-4 border-brand-dark"></div>
-                    <div class="bg-brand-card border border-white/5 p-6 rounded-2xl">
-                        <span class="text-sm text-gray-500 font-mono mb-2 block">Graduated</span>
-                        <h3 class="text-xl font-bold text-white">Bachelor of Science (B.Sc.)</h3>
-                        <h4 class="text-gray-300 font-medium">Computer Science</h4>
-                        <p class="text-gray-400 mt-2">
-                            Built a strong foundational understanding of software development, algorithms, and computing principles.
+                    <div class="absolute w-3 h-3 bg-indigo-500 rounded-full -left-[6.5px] md:-left-[6.5px] top-1.5 ring-4 ring-[#0d0d0d]"></div>
+                    <div class="bg-brand-card border border-white/5 p-6 rounded-xl hover:border-white/10 transition-colors">
+                        <span class="text-xs text-indigo-400 font-mono mb-2 block">Past Experience</span>
+                        <h3 class="text-lg font-bold text-white">AI & Machine Learning Intern</h3>
+                        <p class="text-gray-400 text-sm mt-2 leading-relaxed">
+                            Completed an intensive internship focusing on ML concepts. Achieved an overall assessment score of 79%. Gained practical insight into how data-driven models operate, which I now apply to my web integration projects.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3: Education -->
+                <div class="reveal relative md:pl-8 pl-6">
+                    <div class="absolute w-3 h-3 bg-gray-600 rounded-full -left-[6.5px] md:-left-[6.5px] top-1.5 ring-4 ring-[#0d0d0d]"></div>
+                    <div class="bg-brand-card border border-white/5 p-6 rounded-xl hover:border-white/10 transition-colors">
+                        <span class="text-xs text-gray-500 font-mono mb-2 block">Graduated</span>
+                        <h3 class="text-lg font-bold text-white">B.Sc. in Computer Science</h3>
+                        <p class="text-gray-400 text-sm mt-2 leading-relaxed">
+                            Built a strong foundational understanding of software development, algorithms, logic structuring, and computing principles.
                         </p>
                     </div>
                 </div>
@@ -312,28 +323,31 @@
     </section>
 
     <!-- Footer / Contact -->
-    <footer class="py-12 border-t border-white/5 bg-brand-dark relative overflow-hidden">
-        <div class="max-w-6xl mx-auto px-6 relative z-10">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-                <div class="flex items-center gap-2">
-                    <i data-lucide="cpu" class="w-5 h-5 text-indigo-500"></i>
-                    <span class="text-lg font-bold text-white">Mahmadul<span class="text-indigo-500">.</span></span>
-                </div>
-                
-                <div class="flex items-center gap-6">
-                    <a href="https://github.com/Mahmadul-rgb" target="_blank" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
-                        <i data-lucide="github" class="w-5 h-5"></i> <span class="hidden sm:inline">GitHub</span>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
-                        <i data-lucide="twitter" class="w-5 h-5"></i> <span class="hidden sm:inline">Twitter</span>
-                    </a>
-                    <a href="mailto:your.email@example.com" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
-                        <i data-lucide="mail" class="w-5 h-5"></i> <span class="hidden sm:inline">Email</span>
+    <footer id="contact" class="py-16 border-t border-white/5 bg-[#0A0A0A]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="bg-brand-card border border-white/5 rounded-2xl p-8 md:p-12 text-center mb-12">
+                <h2 class="text-2xl font-bold text-white mb-4">Let's Connect</h2>
+                <p class="text-gray-400 text-sm mb-8 max-w-md mx-auto">
+                    I am currently looking for junior front-end developer roles, freelance projects, or internships where I can contribute and continue to learn.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="mailto:your.email@example.com" class="px-6 py-2.5 bg-indigo-600 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition-colors">
+                        Send me an Email
                     </a>
                 </div>
             </div>
-            <div class="mt-8 text-center text-gray-600 text-sm">
-                &copy; <span id="year"></span> Mahmadul Hussain. All rights reserved. Building with AI.
+
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="terminal" class="w-5 h-5 text-gray-500"></i>
+                    <span class="text-sm font-medium text-gray-400">Mahmadul Hussain</span>
+                </div>
+                
+                <div class="flex items-center gap-6">
+                    <a href="https://github.com/Mahmadul-rgb" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-white transition-colors flex items-center gap-2 text-sm">
+                        <i data-lucide="github" class="w-4 h-4"></i> GitHub
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
@@ -343,10 +357,7 @@
         // Initialize Lucide Icons
         lucide.createIcons();
 
-        // Set current year in footer
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Intersection Observer for scroll animations (replaces Framer Motion)
+        // Intersection Observer for scroll animations
         const observerOptions = {
             root: null,
             rootMargin: '0px',
@@ -357,26 +368,23 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
-                    // Optional: Stop observing once revealed
-                    // observer.unobserve(entry.target); 
                 }
             });
         }, observerOptions);
 
-        // Select all elements with the 'reveal' class and observe them
         document.querySelectorAll('.reveal').forEach((element) => {
             observer.observe(element);
         });
 
-        // Add a simple glass effect to nav on scroll
+        // Nav background change on scroll
         const nav = document.querySelector('nav');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 20) {
-                nav.classList.add('shadow-lg', 'shadow-black/20');
-                nav.style.background = 'rgba(10, 10, 10, 0.85)';
+                nav.style.background = 'rgba(10, 10, 10, 0.95)';
+                nav.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
             } else {
-                nav.classList.remove('shadow-lg', 'shadow-black/20');
-                nav.style.background = 'rgba(10, 10, 10, 0.7)';
+                nav.style.background = 'rgba(10, 10, 10, 0.8)';
+                nav.style.borderBottom = '1px solid rgba(255, 255, 255, 0.05)';
             }
         });
     </script>
