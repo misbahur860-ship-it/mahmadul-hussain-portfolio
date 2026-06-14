@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahmadul Hussain | AI & Web Developer</title>
+    <meta name="description" content="Computer Science graduate building AI-powered web applications.">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Config for Custom Colors & Animations -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0A0A0A',
+                            card: '#111111',
+                            border: '#222222',
+                            accent: '#6366f1', // Indigo
+                            accentHover: '#4f46e5'
+                        }
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'fade-up': 'fadeUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0A0A0A;
+            color: #f3f4f6;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A0A0A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        /* Reveal classes for JS observer */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .glass-nav {
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-indigo-500/30 selection:text-indigo-200">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight text-white flex items-center gap-2 group">
+                <i data-lucide="cpu" class="w-6 h-6 text-indigo-500 group-hover:rotate-12 transition-transform"></i>
+                Mahmadul<span class="text-indigo-500">.</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+                <a href="#experience" class="hover:text-white transition-colors">Experience</a>
+            </div>
+            <a href="https://github.com/Mahmadul-rgb" target="_blank" class="p-2 bg-white/5 rounded-full hover:bg-white/10 transition-colors border border-white/5">
+                <i data-lucide="github" class="w-5 h-5 text-gray-300"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background Gradient Blobs -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
+        <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-600/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-2000"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center reveal">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300 mb-6">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                Building Pixora
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
+                Computer Science Graduate <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500">
+                    Building with AI
+                </span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Transforming complex concepts into production-ready web applications. Focused on artificial intelligence, machine learning, and modern web development.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#projects" class="w-full sm:w-auto px-8 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
+                    View My Work <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+                <a href="https://github.com/Mahmadul-rgb" target="_blank" class="w-full sm:w-auto px-8 py-3 bg-white/5 text-white font-semibold rounded-lg border border-white/10 hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
+                    <i data-lucide="github" class="w-4 h-4"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 relative border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Learning by <span class="text-indigo-400">Building.</span></h2>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        I'm a Computer Science graduate with a strong interest in artificial intelligence, machine learning, and modern web development. Over the past few years, I've spent most of my time learning by building—experimenting with AI tools, creating web applications, and exploring how technology can solve practical problems.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed mb-8">
+                        Right now, I'm focused on building projects, improving my technical skills, and learning how to turn ideas into useful products that people can actually use. My current major focus is Pixora, an AI-powered image generation platform.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="twitter" class="w-6 h-6"></i></a>
+                        <a href="mailto:your.email@example.com" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="mail" class="w-6 h-6"></i></a>
+                    </div>
+                </div>
+
+                <!-- Profile Image -->
+                <div class="reveal relative group rounded-2xl overflow-hidden border border-white/10 bg-brand-card aspect-square md:aspect-[4/5] max-w-md mx-auto w-full">
+                    <img 
+                        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5Z_QVeUof4X5b_fgVnNumCyILHjDXDJh8wrUPoMKTJ3jfl11MCuGJJXHy8y18yM3bvCsrU5BPuwvlIKbHp48Tui6BKlV3zsft8sJIgLu98rUdFKGMAuBaEBg4g5FJFXsQLjcAiiOZowvWfid5bosJ7FENupbW_WQzXMgThX1EBSGuwXDWSKw5r6-LM2A/s320/WhatsApp%20Image%202026-06-14%20at%202.54.28%20PM.jpeg" 
+                        alt="Mahmadul Hussain" 
+                        class="object-cover w-full h-full transition-all duration-700 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
+                    >
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <div class="font-mono text-sm text-indigo-400 bg-brand-dark/80 backdrop-blur-sm p-3 rounded border border-white/10">
+                            > status: Building the future<span class="animate-pulse">_</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 relative border-t border-white/5 bg-brand-card/30">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center reveal">Technical <span class="text-indigo-400">Arsenal</span></h2>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Web Dev -->
+                <div class="reveal bg-brand-card p-6 rounded-2xl border border-white/5 hover:border-indigo-500/50 transition-colors group">
+                    <i data-lucide="layout-template" class="w-10 h-10 text-indigo-400 mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-semibold text-white mb-4">Web Development</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-2 text-gray-400"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Next.js & React</li>
+                        <li class="flex items-center gap-2 text-gray-400"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> TypeScript / JavaScript</li>
+                        <li class="flex items-center gap-2 text-gray-400"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Tailwind CSS</li>
+                        <li class="flex items-center gap-2 text-gray-400"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Node.js</li>
+                    </ul>
+                </div>
+
+                <!-- AI/ML -->
+                <div class="reveal bg-brand-card p-6 rounded-2xl border border-white/5 hover:border-purple-500/50 transition-colors group" style="transition-delay: 100ms;">
+                    <i data-lucide="brain-circuit" class="w-10 h-10 text-purple-400 mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-semibold text-white mb-4">AI & Machine Learning</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-2 text-gray-400"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Python</li>
+                        <li class="flex items-center gap-2 text-gray-400"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Data Analysis</li>
+                        <li class="flex items-center gap-2 text-gray-400"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> AI Integrations</li>
+                        <li class="flex items-center gap-2 text-gray-400"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Automation</li>
+                    </ul>
+                </div>
+
+                <!-- Tools -->
+                <div class="reveal bg-brand-card p-6 rounded-2xl border border-white/5 hover:border-emerald-500/50 transition-colors group" style="transition-delay: 200ms;">
+                    <i data-lucide="terminal-square" class="w-10 h-10 text-emerald-400 mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-semibold text-white mb-4">Tools & Workflow</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-2 text-gray-400"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Git & GitHub</li>
+                        <li class="flex items-center gap-2 text-gray-400"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Product Development</li>
+                        <li class="flex items-center gap-2 text-gray-400"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Problem Solving</li>
+                        <li class="flex items-center gap-2 text-gray-400"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> B.Sc. Computer Science</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 relative border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 reveal">Featured <span class="text-indigo-400">Work</span></h2>
+            
+            <!-- Pixora Project Card -->
+            <div class="reveal bg-brand-card border border-white/10 rounded-3xl overflow-hidden group">
+                <div class="grid md:grid-cols-2 gap-0">
+                    <div class="p-8 md:p-12 flex flex-col justify-center">
+                        <div class="flex items-center gap-2 text-indigo-400 text-sm font-semibold tracking-wider uppercase mb-4">
+                            <i data-lucide="sparkles" class="w-4 h-4"></i> Flagship Project
+                        </div>
+                        <h3 class="text-3xl font-bold text-white mb-4">Pixora</h3>
+                        <p class="text-gray-400 leading-relaxed mb-8">
+                            An advanced AI-powered image generation platform. Built to streamline the creative process, allowing users to generate high-quality visuals through intuitive text prompts and modern web interfaces.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">Next.js</span>
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">React</span>
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">AI APIs</span>
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">Tailwind</span>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <a href="#" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-colors flex items-center gap-2">
+                                Live Demo <i data-lucide="external-link" class="w-4 h-4"></i>
+                            </a>
+                            <a href="https://github.com/Mahmadul-rgb" target="_blank" class="px-6 py-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium rounded-lg transition-colors flex items-center gap-2">
+                                Source <i data-lucide="github" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Abstract Placeholder for Project Image -->
+                    <div class="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 min-h-[300px] flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] [mask-image:linear-gradient(to_bottom_right,white,transparent)]"></div>
+                        <i data-lucide="image" class="w-24 h-24 text-white/20 group-hover:scale-110 transition-transform duration-500"></i>
+                        <div class="absolute bottom-4 right-4 bg-black/50 backdrop-blur text-xs text-gray-400 px-3 py-1 rounded-full border border-white/10">
+                            Screenshot Placeholder
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 relative border-t border-white/5 bg-brand-card/30">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center reveal">Experience & <span class="text-indigo-400">Education</span></h2>
+            
+            <div class="relative border-l border-white/10 ml-4 md:ml-0 md:pl-0 space-y-12">
+                
+                <!-- Timeline Item 1 -->
+                <div class="reveal relative md:pl-8 pl-6">
+                    <div class="absolute w-4 h-4 bg-indigo-500 rounded-full -left-[9px] md:-left-[9px] top-1 border-4 border-brand-dark"></div>
+                    <div class="bg-brand-card border border-white/5 p-6 rounded-2xl">
+                        <span class="text-sm text-indigo-400 font-mono mb-2 block">Recent</span>
+                        <h3 class="text-xl font-bold text-white">AI & Machine Learning Intern</h3>
+                        <p class="text-gray-400 mt-2">
+                            Achieved an overall score of 79%. Strengthened understanding of machine learning concepts, data-driven problem solving, and real-world AI applications.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="reveal relative md:pl-8 pl-6">
+                    <div class="absolute w-4 h-4 bg-gray-600 rounded-full -left-[9px] md:-left-[9px] top-1 border-4 border-brand-dark"></div>
+                    <div class="bg-brand-card border border-white/5 p-6 rounded-2xl">
+                        <span class="text-sm text-gray-500 font-mono mb-2 block">Graduated</span>
+                        <h3 class="text-xl font-bold text-white">Bachelor of Science (B.Sc.)</h3>
+                        <h4 class="text-gray-300 font-medium">Computer Science</h4>
+                        <p class="text-gray-400 mt-2">
+                            Built a strong foundational understanding of software development, algorithms, and computing principles.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer class="py-12 border-t border-white/5 bg-brand-dark relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="cpu" class="w-5 h-5 text-indigo-500"></i>
+                    <span class="text-lg font-bold text-white">Mahmadul<span class="text-indigo-500">.</span></span>
+                </div>
+                
+                <div class="flex items-center gap-6">
+                    <a href="https://github.com/Mahmadul-rgb" target="_blank" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                        <i data-lucide="github" class="w-5 h-5"></i> <span class="hidden sm:inline">GitHub</span>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                        <i data-lucide="twitter" class="w-5 h-5"></i> <span class="hidden sm:inline">Twitter</span>
+                    </a>
+                    <a href="mailto:your.email@example.com" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                        <i data-lucide="mail" class="w-5 h-5"></i> <span class="hidden sm:inline">Email</span>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-600 text-sm">
+                &copy; <span id="year"></span> Mahmadul Hussain. All rights reserved. Building with AI.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Intersection Observer for scroll animations (replaces Framer Motion)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // Optional: Stop observing once revealed
+                    // observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        // Select all elements with the 'reveal' class and observe them
+        document.querySelectorAll('.reveal').forEach((element) => {
+            observer.observe(element);
+        });
+
+        // Add a simple glass effect to nav on scroll
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-lg', 'shadow-black/20');
+                nav.style.background = 'rgba(10, 10, 10, 0.85)';
+            } else {
+                nav.classList.remove('shadow-lg', 'shadow-black/20');
+                nav.style.background = 'rgba(10, 10, 10, 0.7)';
+            }
+        });
+    </script>
+</body>
+</html>
